@@ -1,13 +1,13 @@
 
 import { useState } from 'react';
-
+import "./Tarjeta.css";
 
 export default function Tarjeta() {
   const [contador, setContador] = useState(0);
 
   return (
-    <div>
-      <p>{`Has hecho clic ${contador} veces`}</p>
+    <div className='tarjeta'>
+      <p> Has hecho clic {contador} veces</p>
 
       <button onClick={() => setContador(contador + 1)}>
         ➕ Sumar

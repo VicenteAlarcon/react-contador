@@ -1,13 +1,20 @@
-type Props = {
-    titulo: string;
-    mensaje: string;
-};
 
-export function Tarjeta({ titulo, mensaje }: Props) {
-    return (
-        <div style={{ border: "1px solid #ccc", padding:"1rem", borderRadius:8 }}>
-            <h3>{titulo}</h3>
-            <p>{mensaje}</p>
-        </div>
-    );
-}
+import { useState } from 'react';
+
+
+export default function Tarjeta() {
+  const [contador, setContador] = useState(0);
+
+  return (
+    <div>
+      <p>{`Has hecho clic ${contador} veces`}</p>
+
+      <button onClick={() => setContador(contador + 1)}>
+        ➕ Sumar
+      </button>
+       <button onClick={() => setContador(contador - 1 )}>
+        ➖ Restar
+      </button>
+      </div>
+      )
+      }
